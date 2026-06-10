@@ -1,28 +1,26 @@
-# 居酒屋ヒロノブ Webサイト
+# 居酒屋ヒロノブ iPhone閲覧特化版
 
-GitHubでアップロードしやすいように、ファイル総数100未満に整理した静的サイト版です。
+GitHub Pagesにそのままアップロードできる静的サイトです。
 
-## GitHub Pagesで公開する場合
+## 特徴
 
-このフォルダの中身を、GitHubリポジトリのルート直下へアップロードしてください。
+- iPhone縦画面に最適化
+- 下部固定ナビ
+- タップしやすい44px以上の操作領域
+- iPhoneのノッチ / Dynamic Island / ホームバー周辺の安全領域対応
+- 画像をWebP化して軽量化
+- 予約ページはカレンダーアイコン押下で日付選択UIを展開
+- GitHubアップロード用にファイル総数100未満
 
-アップロードするもの：
+## GitHub Pagesで使う
 
-- `index.html`
-- `assets` フォルダ
-- `.nojekyll`
-- `README.md`
-- `GITHUB_UPLOAD_GUIDE.md`
+このフォルダの中身をGitHubリポジトリへアップロードしてください。
+ZIPのままではなく、中身をアップロードします。
 
-`react-source`、`dist`、`node_modules` は不要です。
+必要な主なファイル：
 
-## ローカル確認
+- index.html
+- assets/
+- manifest.webmanifest
+- .nojekyll
 
-`index.html` をダブルクリックして確認できます。
-表示されない場合は、VS Codeの Live Server か、以下で確認してください。
-
-```bash
-python -m http.server 8000
-```
-
-その後、ブラウザで `http://localhost:8000` を開いてください。

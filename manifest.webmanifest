@@ -1,0 +1,16 @@
+{
+  "name": "居酒屋ヒロノブ",
+  "short_name": "ヒロノブ",
+  "description": "長崎県五島市の地元寄り添い居酒屋。iPhone閲覧特化版。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#090807",
+  "theme_color": "#090807",
+  "icons": [
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "./assets/apple-touch-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -1,16 +1,172 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="長崎県五島市の隠れ家居酒屋ヒロノブ。赤提灯が灯っとっと、営業中ばい。" />
-    <meta name="theme-color" content="#090807" />
-    <meta name="color-scheme" content="dark" />
-    <title>居酒屋ヒロノブ | 五島の隠れ家</title>
-    <script defer src="./assets/app.js"></script>
-    <link rel="stylesheet" href="./assets/style.css">
-  </head>
-  <body>
-    <div id="root"><p style="padding:24px;background:#090807;color:#efe5cf;font-family:serif;">読み込み中です。表示されない場合は同梱の開き方を確認してください。</p></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="長崎県五島市の隠れ家居酒屋ヒロノブ。104号室のチャイムを鳴らす、地元寄り添い居酒屋。" />
+  <meta name="theme-color" content="#090807" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ヒロノブ" />
+  <meta name="format-detection" content="telephone=yes" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./assets/site.css" />
+  <script defer src="./assets/site.js"></script>
+  <title>居酒屋ヒロノブ | iPhone閲覧特化版</title>
+</head>
+<body>
+  <div class="app-shell" id="top">
+    <header class="topbar" aria-label="上部ナビゲーション">
+      <a class="brand" href="#top" aria-label="居酒屋ヒロノブ トップへ">
+        <span>居酒屋</span><strong>ヒロノブ</strong>
+      </a>
+      <a class="reserve-pill" href="#reserve">空席ある？</a>
+    </header>
+
+    <main>
+      <section class="hero section" aria-labelledby="hero-title">
+        <picture>
+          <img class="hero-bg" src="./assets/hero_lantern_chime.webp" alt="104号室のチャイムと赤提灯" loading="eager" />
+        </picture>
+        <div class="hero-shade"></div>
+        <div class="hero-room">104号室</div>
+        <div class="hero-copy">
+          <p class="eyebrow">GOTO CITY / APARTMENT IZAKAYA</p>
+          <h1 id="hero-title">赤提灯が<br>灯っとっと、<br><span>営業中ばい。</span></h1>
+          <p class="lead">深夜でも、チャイムをひとつ。<br>五島の夜は、ヒロノブからはじまるたい。</p>
+          <p class="local-note">坊主やったらごめんたい。そん時は、笑ってまた来てみんね。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#reserve">今夜、ピンポンするばい</a>
+            <a class="btn ghost" href="#menu">お品書きを見る</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="section panel-section" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <p>MENU</p>
+          <h2 id="menu-title">お品書き</h2>
+          <span>五島の腹ぺこを、ちゃんと受け止めるばい。</span>
+        </div>
+        <article class="featured-food">
+          <img src="./assets/buri_nitsuke_large.webp" alt="ぶりのあらの煮つけ" loading="lazy" />
+          <div>
+            <p class="tag">名物たい</p>
+            <h3>ぶりのあらの煮つけ</h3>
+            <p>甘辛く炊いとるけん、骨のまわりが一番うまか。これ食わんで帰ったら、ちょっと損たい。</p>
+          </div>
+        </article>
+        <div class="menu-list">
+          <article class="menu-card"><img src="./assets/fish.svg" alt="" /><div><h3>イカの刺身</h3><p>坊主だったら、ごめんたい。釣れた日は、そりゃもう勝ちばい。</p></div></article>
+          <article class="menu-card"><img src="./assets/beer.svg" alt="" /><div><h3>ビール</h3><p>キリン糖質0、ヱビス、プレミアムモルツ。まず一杯、いっとかんね。</p></div></article>
+          <article class="menu-card"><img src="./assets/sake.svg" alt="" /><div><h3>日本酒</h3><p>ヒロノブおすすめ。説明は長かけん、飲んでから聞いてくれんね。</p></div></article>
+          <article class="menu-card"><img src="./assets/bottles.webp" alt="焼酎" /><div><h3>焼酎</h3><p>麦しか飲まん！ばってん、麦はちゃんと選んどるたい。</p></div></article>
+          <article class="menu-card"><img src="./assets/karaage.webp" alt="鳥の唐揚げ" /><div><h3>鳥の唐揚げ</h3><p>ヒロノブお手製。熱かうちに食べんば、もったいなか。</p></div></article>
+          <article class="menu-card"><img src="./assets/tempura.webp" alt="キスの天ぷら" /><div><h3>キスの天ぷら</h3><p>一人で揚げるばい！混んどったら、ちょっと待ってくれんね。</p></div></article>
+          <article class="menu-card"><img src="./assets/late_food.webp" alt="深夜メニュー" /><div><h3>深夜メニュー</h3><p>気づいたら朝までコース。責任は取らんばってん、味は見るたい。</p></div></article>
+        </div>
+      </section>
+
+      <section id="about" class="section dark-card" aria-labelledby="about-title">
+        <div class="section-heading compact">
+          <p>LOCAL</p>
+          <h2 id="about-title">五島の104号室、開いとるばい</h2>
+        </div>
+        <div class="story-grid">
+          <img src="./assets/hero_104_chime.webp" alt="104号室のチャイム" loading="lazy" />
+          <div>
+            <h3>チャイムを鳴らしたら、そこが入口たい。</h3>
+            <p>看板は控えめ。赤提灯と104号室のチャイムだけが目印。入りにくか？大丈夫たい。中に入れば、だいたい誰かが笑っとるけん。</p>
+          </div>
+        </div>
+        <div class="mini-points">
+          <span>ひとり飲み歓迎</span><span>方言多め</span><span>地元ノリ強め</span><span>坊主の日あり</span>
+        </div>
+      </section>
+
+      <section id="interior" class="section panel-section" aria-labelledby="interior-title">
+        <div class="section-heading">
+          <p>INSIDE</p>
+          <h2 id="interior-title">店内のご案内</h2>
+          <span>狭かばってん、落ち着く。これがヒロノブたい。</span>
+        </div>
+        <div class="photo-stack">
+          <img class="wide-photo" src="./assets/interior_counter_wide.webp" alt="木のカウンター席" loading="lazy" />
+          <div class="photo-row">
+            <img src="./assets/interior_noren.webp" alt="暖簾" loading="lazy" />
+            <img src="./assets/concept_lantern.webp" alt="赤提灯" loading="lazy" />
+          </div>
+        </div>
+        <p class="body-copy">カウンター中心の小さな店。初めてでも、常連っぽい顔して入ってよかよ。</p>
+      </section>
+
+      <section id="first" class="section dark-card" aria-labelledby="first-title">
+        <div class="section-heading compact">
+          <p>FIRST VISIT</p>
+          <h2 id="first-title">初めての方へ</h2>
+        </div>
+        <div class="guide-list">
+          <article><img src="./assets/chime.svg" alt="" /><div><h3>104号室ば押す</h3><p>ピンポンしたら、だいたい誰か出るけん。静かに逃げんでよか。</p></div></article>
+          <article><img src="./assets/person.svg" alt="" /><div><h3>一人でもよか</h3><p>カウンターでちょい飲み歓迎。話しかけすぎたら、ごめんたい。</p></div></article>
+          <article><img src="./assets/wallet.svg" alt="" /><div><h3>支払いは確認してね</h3><p>現金多めが安心たい。カード対応は、その日の機嫌じゃなく設備次第。</p></div></article>
+        </div>
+      </section>
+
+      <section id="access" class="section panel-section" aria-labelledby="access-title">
+        <div class="section-heading">
+          <p>ACCESS</p>
+          <h2 id="access-title">店舗情報</h2>
+          <span>迷ったら電話してくれんね。五島の道は、たまに説明が難しか。</span>
+        </div>
+        <dl class="info-list">
+          <div><dt>住所</dt><dd>長崎県五島市○○町1-2-3<br>アパート○○ 104号室</dd></div>
+          <div><dt>営業時間</dt><dd>18:00〜深夜2:00<br><small>不定休。気分と天気も少し関係あるたい。</small></dd></div>
+          <div><dt>席数</dt><dd>カウンター8席、テーブル2卓</dd></div>
+          <div><dt>電話</dt><dd><a href="tel:09012345678">090-1234-5678</a></dd></div>
+        </dl>
+        <img class="map" src="./assets/map.webp" alt="店舗周辺地図" loading="lazy" />
+      </section>
+
+      <section id="reserve" class="section panel-section reserve-section" aria-labelledby="reserve-title">
+        <div class="section-heading">
+          <p>RESERVE</p>
+          <h2 id="reserve-title">空席あるか聞いてみるばい</h2>
+          <span>送信以外は実用に耐えるよう、iPhoneで押しやすくしとるたい。</span>
+        </div>
+        <form class="reserve-form" id="reserve-form">
+          <label class="field date-field">
+            <span>ご希望日</span>
+            <div class="date-control">
+              <input id="date-display" type="text" readonly value="2024/06/15（土）" aria-label="ご希望日" />
+              <button id="calendar-toggle" type="button" aria-label="カレンダーを開く"><img src="./assets/calendar.svg" alt="" /></button>
+            </div>
+            <div class="calendar-pop" id="calendar-pop" hidden>
+              <div class="calendar-head"><button type="button" data-month="prev">‹</button><strong id="calendar-title">2024年6月</strong><button type="button" data-month="next">›</button></div>
+              <div class="week-row"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+              <div class="days-grid" id="days-grid"></div>
+              <p>日付ば押したら、その日で仮押さえたい。</p>
+            </div>
+          </label>
+          <label class="field"><span>時間</span><select><option>19:00</option><option>20:00</option><option>21:00</option><option>22:00</option></select></label>
+          <label class="field"><span>人数</span><select><option>2名様</option><option>1名様</option><option>3名様</option><option>4名様</option></select></label>
+          <label class="field"><span>お名前</span><input type="text" value="五島 太郎" /></label>
+          <label class="field"><span>電話番号</span><input type="tel" value="090-1234-5678" inputmode="tel" /></label>
+          <label class="field full"><span>ご要望</span><textarea>なんでもどうぞ！</textarea></label>
+          <button class="btn primary submit-btn" type="button" id="fake-submit">予約するばい</button>
+          <p class="form-note">※送信機能は未接続たい。当日は電話が一番確実ばい。</p>
+        </form>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="iPhone下部ナビゲーション">
+      <a href="#top"><img src="./assets/lantern.svg" alt="" /><span>入口</span></a>
+      <a href="#menu"><img src="./assets/fish.svg" alt="" /><span>品書き</span></a>
+      <a href="#first"><img src="./assets/chime.svg" alt="" /><span>案内</span></a>
+      <a href="#reserve"><img src="./assets/calendar.svg" alt="" /><span>予約</span></a>
+    </nav>
+
+    <div class="toast" id="toast" hidden>まだ送信せんばい。見た目だけ実用仕様たい。</div>
+  </div>
+</body>
 </html>

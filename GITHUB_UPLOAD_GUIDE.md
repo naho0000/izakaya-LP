@@ -1,45 +1,27 @@
 # GitHubアップロード手順
 
-## 1. ZIPを解凍する
+1. ZIPを解凍
+2. `hironobu-iphone-optimized` フォルダを開く
+3. 中身をすべて選択
+4. GitHubのリポジトリで `Add file` → `Upload files`
+5. ドラッグ＆ドロップ
+6. `Commit changes`
+7. `Settings` → `Pages`
+8. `Deploy from a branch`
+9. Branchを `main`、フォルダを `/root` にする
+10. 表示されたURLをiPhoneのSafariで開く
 
-`hironobu-github-under100.zip` を解凍してください。
+## アップロードするもの
 
-## 2. GitHubリポジトリを開く
+- index.html
+- assets フォルダ
+- manifest.webmanifest
+- .nojekyll
+- README.md
+- IPHONE_VIEW_GUIDE.md
 
-公開したいリポジトリを開きます。
+## アップロードしないもの
 
-## 3. ファイルをアップロードする
-
-GitHubの画面で以下を選びます。
-
-`Add file` → `Upload files`
-
-## 4. 中身をアップロードする
-
-解凍した `hironobu-github-under100` フォルダを開き、**中身だけ**をアップロードしてください。
-
-アップロード対象：
-
-- `index.html`
-- `assets` フォルダ
-- `.nojekyll`
-- `README.md`
-- `GITHUB_UPLOAD_GUIDE.md`
-
-フォルダごとではなく、中身をドラッグしてください。
-
-## 5. Commitする
-
-下の緑ボタン `Commit changes` を押してください。
-
-## 6. GitHub Pagesを有効化する
-
-`Settings` → `Pages` → `Build and deployment`
-
-設定：
-
-- Source: `Deploy from a branch`
-- Branch: `main`
-- Folder: `/root`
-
-保存後、数分待つとURLが発行されます。
+- ZIPファイルそのもの
+- node_modules
+- Reactの開発用フォルダ
